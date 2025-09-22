@@ -278,7 +278,7 @@
         <div class="row">
             <!-- Example 2 -->
             <div class="col-12 col-md-6 mb-4">
-                <h5 class="text-center">Triangle Splatting vs <strong>Triangle Splatting+</strong></h5>
+                <h5 class="text-center">Opaque Triangle Splatting vs <strong>Triangle Splatting+</strong></h5>
                 <div id="example2" class="small-bal-container">
                     <div class="bal-wrapper">
                         <div class="bal-after">
@@ -288,7 +288,7 @@
                         <div class="bal-before">
                             <div class="bal-before-inset">
                                 <img src="assets/comparisons/stump_ts.png" alt="Example 2 Before">
-                                <div class="bal-beforePosition beforeLabel">Triangle Splatting</div>
+                                <div class="bal-beforePosition beforeLabel">Opaque Triangle Splatting</div>
                             </div>
                         </div>
                         <div class="bal-handle">
@@ -300,7 +300,7 @@
             </div>
             <!-- Example 3 -->
             <div class="col-12 col-md-6 mb-4">
-                <h5 class="text-center">Ground truth vs <strong>Triangle Splatting+</strong></h5>
+                <h5 class="text-center">Ground truth vs <strong>Opaque Triangle Splatting+</strong></h5>
                 <div id="example3" class="small-bal-container">
                     <div class="bal-wrapper">
                         <div class="bal-after">
@@ -334,7 +334,7 @@
                         <div class="bal-before">
                             <div class="bal-before-inset">
                                 <img src="assets/comparisons/bonsai_ts.png" alt="Example 6 Before">
-                                <div class="bal-beforePosition beforeLabel">Triangle Splatting</div>
+                                <div class="bal-beforePosition beforeLabel">Opaque Triangle Splatting</div>
                             </div>
                         </div>
                         <div class="bal-handle">
@@ -379,7 +379,7 @@
                         <div class="bal-before">
                             <div class="bal-before-inset">
                                 <img src="assets/comparisons/bicycle_ts.png" alt="Example 4 Before">
-                                <div class="bal-beforePosition beforeLabel">Triangle Splatting</div>
+                                <div class="bal-beforePosition beforeLabel">Opaque Triangle Splatting</div>
                             </div>
                         </div>
                         <div class="bal-handle">
@@ -418,49 +418,30 @@
         </p>
 
 
-
-    <div class="container mb-4">
-        <hr class="divider" />
-        <h2 class="font-weight-bold">Byproduct of the Triangle-Based Representation</h2>
-        <div class="row">
-            <div class="col-12 col-md-6 text-center mb-4">
-                <video class="img-fluid" autoplay muted loop playsinline>
-                    <source src="assets/video/room_unity.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
-            </div>
-            <div class="col-12 col-md-6 text-center mb-4">
-                <video class="img-fluid" autoplay muted loop playsinline>
-                    <source src="assets/video/garden_unity.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
-            </div>
-        </div>
-        <p class="text-center pt-2 mx-auto" style="max-width: 1100px;">
-            Triangle Splatting unifies differentiable scene optimization with traditional graphics pipelines. The triangle soup is compatible with any mesh-based renderer, enabling seamless integration into traditional graphics pipelines. In a game engine, we render at 2400+ FPS at 1280×720 resolution on an RTX4090.<br><br>
-            The current visuals are rendered without shaders and were not specifically trained or optimized for game engine fidelity, which accounts for the limited visual quality. Nevertheless, it demonstrates an important first step toward the direct integration of radiance fields into interactive 3D environments. Future work could explore training strategies specifically tailored to maximize visual fidelity in mesh-based renderers, paving the way for seamless integration of reconstructed scenes into standard game engines for real-time applications such as AR/VR or interactive simulations.
-            <br><br>
-            If you want to run some scene on a game engine for yourself, you can download the <em>Garden</em> and <em>Room</em> scenes from the following 
-            <a href="https://drive.google.com/drive/folders/1_TMXEFTdEACpHHvsmc5UeZMM-cMgJ3xW?usp=sharing" target="_blank">link</a>.
-        </p>
-    </div>
-
             <div class="container mb-4">
         <hr class="divider" />
-        <h2 class="font-weight-bold">Download optimized ply files (+-50MB).</h2>
+        <h2 class="font-weight-bold">Download optimized ply files (+-50MB)</h2>
 
         <div class="row">
-            <div class="col-12 col-md-6 mb-4 text-center">
+        <div class="col-12 col-md-4 mb-4 text-center">
             <img src="assets/comparisons/garden_ply.png" alt="RGB image" class="img-fluid rounded shadow-sm">
-            </div>
-
-            <div class="col-12 col-md-6 mb-4 text-center">
-            <img src="assets/comparisons/room_ply.png" alt="Normal map" class="img-fluid rounded shadow-sm">
-            </div>
+            <p class="mt-2">Garden - 43MB</p>
         </div>
 
+        <div class="col-12 col-md-4 mb-4 text-center">
+            <img src="assets/comparisons/bicycle_ply.png" alt="Normal map" class="img-fluid rounded shadow-sm">
+            <p class="mt-2">Bicycle - 51MB</p>
+        </div>
+
+        <div class="col-12 col-md-4 mb-4 text-center">
+            <img src="assets/comparisons/room_ply.png" alt="Extra scene" class="img-fluid rounded shadow-sm">
+            <p class="mt-2">Truck - 30MB</p>
+        </div>
+    </div>
+
+
         <p class="text-center pt-2 mx-auto" style="max-width: 1100px;">
-            If you want to run some scene on a game engine for yourself, you can download the <em>Garden</em> and <em>Room</em> scenes from the following 
+            If you want to run some scene on a game engine for yourself, you can download the <em>Garden</em>, <em>Bicycle</em> or <em>Truck</em> scenes from the following 
             <a href="https://drive.google.com/drive/folders/1HMddW9_OMG2UCBWoJmspkoXBplf2PH5x?usp=sharing" target="_blank">link</a>.
             To achieve the highest visual quality, you should use 4× supersampling.
 
@@ -470,7 +451,7 @@
 
         <div class="container mb-4">
         <hr class="divider" />
-        <h2 class="font-weight-bold">Download the Unity project for physics simulations and a walkable scene.</h2>
+        <h2 class="font-weight-bold">Download the Unity project to explore physics-based interactions and walkable scenes</h2>
 
         <div class="row">
             <div class="col-12 col-md-6 mb-4 text-center">
@@ -489,14 +470,43 @@
         </p>
         </div>
 
+    <div class="container mb-5">
+        <hr class="divider" />
+        <h2 class="font-weight-bold">Check out related work that led to our work</h2>
+
+        <ul class="list-unstyled">
+            <li class="mb-2">
+                <strong>Triangle Splatting for Real-Time Radiance Field Rendering</strong> — 
+                <a href="https://trianglesplatting.github.io/" target="_blank">project page</a>
+            </li>
+            <li class="mb-2">
+                <strong>3D Convex Splatting: Radiance Field Rendering with 3D Smooth Convexes</strong> — 
+                <a href="https://convexsplatting.github.io/" target="_blank">project page</a>
+            </li>
+            <li class="mb-2">
+                <strong>DMesh++: An Efficient Differentiable Mesh for Complex Shapes</strong> — 
+                <a href="https://sonsang.github.io/dmesh2-project/" target="_blank">project page</a>
+            </li>
+            <li class="mb-2">
+                <strong>DMesh: A Differentiable Mesh Representation</strong> — 
+                <a href="https://sonsang.github.io/dmesh-project/" target="_blank">project page</a>
+            </li>
+            <li class="mb-2">
+                <strong>MiLo: Mesh-In-the-Loop Gaussian Splatting for Detailed and Efficient Surface Reconstruction</strong> — 
+                <a href="https://anttwo.github.io/milo/" target="_blank">project page</a>
+            </li>
+        </ul>
+    </div>
+
+
 
     <div class="container mb-4">
         <hr class="divider" />
         <h2 class="font-weight-bold">Citation</h2>
         <code>
-            @article{Held2025Triangle,<br>
+            @article{Held2025Triangle+,<br>
             &nbsp;&nbsp;title = {Triangle Splatting+: Differentiable Rendering with Opaque Triangles},<br>
-            &nbsp;&nbsp;author = {Held, Jan and Vandeghen, Renaud and Deliege, Adrien and Hamdi, Abdullah and Cioppa, Anthony and Giancola, Silvio and Vedaldi, Andrea and Ghanem, Bernard and Tagliasacchi, Andrea and Van Droogenbroeck, Marc},<br>
+            &nbsp;&nbsp;author = {Held, Jan and Vandeghen, Renaud and Son, Sanghyun and Rebain, Daniel and Gadelha, Matheus and Zhou, Yi and Lin, Ming C. and Van Droogenbroeck, Marc and Tagliasacchi, Andrea},<br>
             &nbsp;&nbsp;journal = {arXiv},<br>
             &nbsp;&nbsp;year = {2025},<br>
             }
